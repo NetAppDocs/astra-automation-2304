@@ -11,7 +11,7 @@ settings:
   rss_page: "rn/whats_new.html"
   versions:
     - name: Astra Automation
-      url: /astra-automation
+      url: https://docs.netapp.com/us-en/astra-automation-2211/
       version-number: "23.04"
     - name: Astra Automation
       url: https://docs.netapp.com/us-en/astra-automation-2211/
