@@ -27,7 +27,7 @@ settings:
       version-number: "21.12"
 sidebar:
   entries:
-    - title: Astra Control Automation docs
+    - title: Astra Control Automation 23.04 docs
       url: /index.html
     - section: rn
     - section: intro
