@@ -5,42 +5,683 @@ settings:
   lipi_enabled: true
   internal:
     pdf_enabled: true
-    api_enabled: true
-    api_standardize: false
-    api_preserve_adoc: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
-    api_enabled: true
-  rss_page: "rn/whats_new.html"
+  rss_page: rn/whats_new.html
   versions:
-    - version-number: "23.04"
-      url: /astra-automation-2304
-    - version-number: "24.02"
-      url: /astra-automation
-    - version-number: "23.10"
-      url: /astra-automation-2310
-    - version-number: "23.07"
-      url: /astra-automation-2307
+  - version-number: '23.04'
+    url: "/astra-automation-2304"
+  - version-number: '24.02'
+    url: "/astra-automation"
+  - version-number: '23.10'
+    url: "/astra-automation-2310"
+  - version-number: '23.07'
+    url: "/astra-automation-2307"
 sidebar:
   entries:
-    - title: Astra Control Automation 23.04 docs
-      url: /index.html
-    - section: rn
-    - section: intro
-    - section: get-started
-    - section: rest-core
-    - section: endpoints
-    - section: additional
-    - section: workflows_infra
-    - section: workflows
-    - section: python
-    - section: reference
-    - section: information
-    - title: Earlier versions
-      url: /aa-earlier-versions.html
-    - title: Legal notices
-      url: /legal-notices.html
+  - title: Astra Control Automation 23.04 docs
+    url: "/index.html"
+  - section: rn
+  - section: intro
+  - section: get-started
+  - section: rest-core
+  - section: endpoints
+  - section: additional
+  - section: workflows_infra
+  - section: workflows
+  - section: python
+  - title: API reference
+    entries:
+    - title: Overview
+      url: "/reference/astra_api_(acs)_overview.html"
+    - title: ASUP
+      entries:
+      - title: Overview
+        url: "/reference/asup_endpoints.html"
+      - title: Create a new ASUP resource
+        url: "/reference/post-accounts-core-v1-asups.html"
+      - title: List all ASUP resources
+        url: "/reference/get-accounts-core-v1-asups.html"
+      - title: Retrieve an ASUP resource
+        url: "/reference/get-accounts-core-v1-asups-.html"
+    - title: Account
+      entries:
+      - title: Overview
+        url: "/reference/account_endpoints.html"
+      - title: Create a new account
+        url: "/reference/post-accounts.html"
+      - title: List all accounts
+        url: "/reference/get-accounts.html"
+      - title: Retrieve an account
+        url: "/reference/get-accounts-.html"
+      - title: Modify an account
+        url: "/reference/put-accounts-.html"
+      - title: Delete an account
+        url: "/reference/delete-accounts-.html"
+    - title: App
+      entries:
+      - title: Overview
+        url: "/reference/app_endpoints.html"
+      - title: Create a new app for a managed cluster
+        url: "/reference/post-accounts-topology-v2-managedclusters-apps.html"
+      - title: List the apps for a managed cluster
+        url: "/reference/get-accounts-topology-v2-managedclusters-apps.html"
+      - title: Retrieve an app for a managed cluster
+        url: "/reference/get-accounts-topology-v2-managedclusters-apps-.html"
+      - title: Modify an app for a managed cluster
+        url: "/reference/put-accounts-topology-v2-managedclusters-apps-.html"
+      - title: Delete an app for a managed cluster
+        url: "/reference/delete-accounts-topology-v2-managedclusters-apps-.html"
+      - title: Create a new app
+        url: "/reference/post-accounts-k8s-v2-apps.html"
+      - title: List all apps
+        url: "/reference/get-accounts-k8s-v2-apps.html"
+      - title: Retrieve an app
+        url: "/reference/get-accounts-k8s-v2-apps-.html"
+      - title: Modify an app
+        url: "/reference/put-accounts-k8s-v2-apps-.html"
+      - title: Delete an app
+        url: "/reference/delete-accounts-k8s-v2-apps-.html"
+    - title: AppMirror
+      entries:
+      - title: Overview
+        url: "/reference/appmirror_endpoints.html"
+      - title: Create a new AppMirror resource
+        url: "/reference/post-accounts-k8s-v1-appmirrors.html"
+      - title: List all AppMirror resources
+        url: "/reference/get-accounts-k8s-v1-appmirrors.html"
+      - title: Retrieve an AppMirror resource
+        url: "/reference/get-accounts-k8s-v1-appmirrors-.html"
+      - title: Modify an AppMirror resource
+        url: "/reference/put-accounts-k8s-v1-appmirrors-.html"
+      - title: Delete an AppMirror resource
+        url: "/reference/delete-accounts-k8s-v1-appmirrors-.html"
+      - title: Create a new AppMirror resource for an app
+        url: "/reference/post-accounts-k8s-v1-apps-appmirrors.html"
+      - title: List the AppMirror resources for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appmirrors.html"
+      - title: Retrieve an AppMirror resource for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appmirrors-.html"
+      - title: Modify an AppMirror resource for an app
+        url: "/reference/put-accounts-k8s-v1-apps-appmirrors-.html"
+      - title: Delete an AppMirror resource for an app
+        url: "/reference/delete-accounts-k8s-v1-apps-appmirrors-.html"
+    - title: Application Snapshot
+      entries:
+      - title: Overview
+        url: "/reference/application_snapshot_endpoints.html"
+      - title: Create a new application snapshot for an app
+        url: "/reference/post-accounts-k8s-v1-apps-appsnaps.html"
+      - title: List the application snapshots for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps.html"
+      - title: Retrieve an application snapshot
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps-.html"
+      - title: Delete an application snapshot
+        url: "/reference/delete-accounts-k8s-v1-apps-appsnaps-.html"
+    - title: Application asset
+      entries:
+      - title: Overview
+        url: "/reference/application_asset_endpoints.html"
+      - title: List the application assets for an application backup
+        url: "/reference/get-accounts-topology-v1-appbackups-appassets.html"
+      - title: Retrieve an application asset from an application backup
+        url: "/reference/get-accounts-topology-v1-appbackups-appassets-.html"
+      - title: List the application assets for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-apps-appassets.html"
+      - title: Retrieve an application asset for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-apps-appassets-.html"
+      - title: List the application assets for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appassets.html"
+      - title: Retrieve an application asset for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appassets-.html"
+      - title: List the application assets from an application backup for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups-appassets.html"
+      - title: Retrieve an application asset from an application backup for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups-appassets-.html"
+      - title: List application assets for an application snapshot
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps-appassets.html"
+      - title: Retrieve an application asset for an application snapshot and app
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps-appassets-.html"
+    - title: Application backup
+      entries:
+      - title: Overview
+        url: "/reference/application_backup_endpoints.html"
+      - title: List all application backups
+        url: "/reference/get-accounts-topology-v1-appbackups.html"
+      - title: Retrieve an application backup
+        url: "/reference/get-accounts-topology-v1-appbackups-.html"
+      - title: Delete an application backup
+        url: "/reference/delete-accounts-topology-v1-appbackups-.html"
+      - title: Create a new application backup for an app
+        url: "/reference/post-accounts-k8s-v1-apps-appbackups.html"
+      - title: List the application backups for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups.html"
+      - title: Retrieve an application backup for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups-.html"
+      - title: Delete an application backup for an app
+        url: "/reference/delete-accounts-k8s-v1-apps-appbackups-.html"
+    - title: Bucket
+      entries:
+      - title: Overview
+        url: "/reference/bucket_endpoints.html"
+      - title: Create a new bucket
+        url: "/reference/post-accounts-topology-v1-buckets.html"
+      - title: List all buckets
+        url: "/reference/get-accounts-topology-v1-buckets.html"
+      - title: Retrieve a bucket
+        url: "/reference/get-accounts-topology-v1-buckets-.html"
+      - title: Modify a bucket
+        url: "/reference/put-accounts-topology-v1-buckets-.html"
+      - title: Delete a bucket
+        url: "/reference/delete-accounts-topology-v1-buckets-.html"
+    - title: Certificate
+      entries:
+      - title: Overview
+        url: "/reference/certificate_endpoints.html"
+      - title: Create a new certificate
+        url: "/reference/post-accounts-core-v1-certificates.html"
+      - title: List all certificates
+        url: "/reference/get-accounts-core-v1-certificates.html"
+      - title: Retrieve a certificate
+        url: "/reference/get-accounts-core-v1-certificates-.html"
+      - title: Modify a certificate
+        url: "/reference/put-accounts-core-v1-certificates-.html"
+      - title: Delete a certificate
+        url: "/reference/delete-accounts-core-v1-certificates-.html"
+    - title: Cloud
+      entries:
+      - title: Overview
+        url: "/reference/cloud_endpoints.html"
+      - title: Create a new cloud
+        url: "/reference/post-accounts-topology-v1-clouds.html"
+      - title: List all clouds
+        url: "/reference/get-accounts-topology-v1-clouds.html"
+      - title: Retrieve a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-.html"
+      - title: Modify a cloud
+        url: "/reference/put-accounts-topology-v1-clouds-.html"
+      - title: Delete a cloud
+        url: "/reference/delete-accounts-topology-v1-clouds-.html"
+    - title: Cluster
+      entries:
+      - title: Overview
+        url: "/reference/cluster_endpoints.html"
+      - title: Create a new cluster for a cloud
+        url: "/reference/post-accounts-topology-v1-clouds-clusters.html"
+      - title: List the clusters for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters.html"
+      - title: Retrieve a cluster for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-.html"
+      - title: Modify a cluster for a cloud
+        url: "/reference/put-accounts-topology-v1-clouds-clusters-.html"
+      - title: Delete a cluster for a cloud
+        url: "/reference/delete-accounts-topology-v1-clouds-clusters-.html"
+      - title: List all clusters
+        url: "/reference/get-accounts-topology-v1-clusters.html"
+      - title: Retrieve a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-.html"
+      - title: Modify a cluster
+        url: "/reference/put-accounts-topology-v1-clusters-.html"
+      - title: Delete a cluster
+        url: "/reference/delete-accounts-topology-v1-clusters-.html"
+    - title: Cluster node
+      entries:
+      - title: Overview
+        url: "/reference/cluster_node_endpoints.html"
+      - title: List the cluster nodes for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-clusternodes.html"
+      - title: Retrieve a cluster node for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-clusternodes-.html"
+      - title: List the cluster nodes for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-clusternodes.html"
+      - title: Retrieve a cluster node for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-clusternodes-.html"
+      - title: List the cluster nodes for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-clusternodes.html"
+      - title: Retrieve a cluster node for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-clusternodes-.html"
+    - title: Credential
+      entries:
+      - title: Overview
+        url: "/reference/credential_endpoints.html"
+      - title: Create a new credential
+        url: "/reference/post-accounts-core-v1-credentials.html"
+      - title: List all credentials
+        url: "/reference/get-accounts-core-v1-credentials.html"
+      - title: Retrieve a credential
+        url: "/reference/get-accounts-core-v1-credentials-.html"
+      - title: Modify a credential
+        url: "/reference/put-accounts-core-v1-credentials-.html"
+      - title: Delete a credential
+        url: "/reference/delete-accounts-core-v1-credentials-.html"
+    - title: Entitlement
+      entries:
+      - title: Overview
+        url: "/reference/entitlement_endpoints.html"
+      - title: List all entitlements
+        url: "/reference/get-accounts-core-v1-entitlements.html"
+      - title: Retrieve an entitlement
+        url: "/reference/get-accounts-core-v1-entitlements-.html"
+    - title: Event
+      entries:
+      - title: Overview
+        url: "/reference/event_endpoints.html"
+      - title: List all events
+        url: "/reference/get-accounts-core-v1-events.html"
+      - title: Retrieve an event
+        url: "/reference/get-accounts-core-v1-events-.html"
+    - title: Execution hook
+      entries:
+      - title: Overview
+        url: "/reference/execution_hook_endpoints.html"
+      - title: Create a new execution hook
+        url: "/reference/post-accounts-core-v1-executionhooks.html"
+      - title: List all execution hooks
+        url: "/reference/get-accounts-core-v1-executionhooks.html"
+      - title: Retrieve an execution hook
+        url: "/reference/get-accounts-core-v1-executionhooks-.html"
+      - title: Modify an execution hook
+        url: "/reference/put-accounts-core-v1-executionhooks-.html"
+      - title: Delete an execution hook
+        url: "/reference/delete-accounts-core-v1-executionhooks-.html"
+      - title: Create a new execution hook for an app
+        url: "/reference/post-accounts-k8s-v1-apps-executionhooks.html"
+      - title: List the execution hooks for an app
+        url: "/reference/get-accounts-k8s-v1-apps-executionhooks.html"
+      - title: Retrieve an execution hook for an app
+        url: "/reference/get-accounts-k8s-v1-apps-executionhooks-.html"
+      - title: Modify an execution hook for an app
+        url: "/reference/put-accounts-k8s-v1-apps-executionhooks-.html"
+      - title: Delete an execution hook for an app
+        url: "/reference/delete-accounts-k8s-v1-apps-executionhooks-.html"
+    - title: Execution hook override
+      entries:
+      - title: Overview
+        url: "/reference/execution_hook_override_endpoints.html"
+      - title: Create a new execution hook override resource for an app
+        url: "/reference/post-accounts-k8s-v1-apps-executionhookoverrides.html"
+      - title: List the execution hook override resources for an app
+        url: "/reference/get-accounts-k8s-v1-apps-executionhookoverrides.html"
+      - title: Retrieve an execution hook override resource
+        url: "/reference/get-accounts-k8s-v1-apps-executionhookoverrides-.html"
+      - title: Modify an execution hook override resource
+        url: "/reference/put-accounts-k8s-v1-apps-executionhookoverrides-.html"
+      - title: Delete an execution hook override resource
+        url: "/reference/delete-accounts-k8s-v1-apps-executionhookoverrides-.html"
+    - title: Feature
+      entries:
+      - title: Overview
+        url: "/reference/feature_endpoints.html"
+      - title: List all features
+        url: "/reference/get-accounts-core-v1-features.html"
+      - title: Retrieve a feature
+        url: "/reference/get-accounts-core-v1-features-.html"
+    - title: Group
+      entries:
+      - title: Overview
+        url: "/reference/group_endpoints.html"
+      - title: Create a new group
+        url: "/reference/post-accounts-core-v1-groups.html"
+      - title: List all groups
+        url: "/reference/get-accounts-core-v1-groups.html"
+      - title: Retrieve a group
+        url: "/reference/get-accounts-core-v1-groups-.html"
+      - title: Modify a group
+        url: "/reference/put-accounts-core-v1-groups-.html"
+      - title: Delete a group
+        url: "/reference/delete-accounts-core-v1-groups-.html"
+      - title: Create a new group for a user
+        url: "/reference/post-accounts-core-v1-users-groups.html"
+      - title: List groups for a user
+        url: "/reference/get-accounts-core-v1-users-groups.html"
+      - title: Retrieve a group for a user
+        url: "/reference/get-accounts-core-v1-users-groups-.html"
+      - title: Modify a group for a user
+        url: "/reference/put-accounts-core-v1-users-groups-.html"
+      - title: Delete a group for a user
+        url: "/reference/delete-accounts-core-v1-users-groups-.html"
+    - title: Hook source
+      entries:
+      - title: Overview
+        url: "/reference/hook_source_endpoints.html"
+      - title: Create a new hook source
+        url: "/reference/post-accounts-core-v1-hooksources.html"
+      - title: List all hook sources
+        url: "/reference/get-accounts-core-v1-hooksources.html"
+      - title: Retrieve a hook source
+        url: "/reference/get-accounts-core-v1-hooksources-.html"
+      - title: Modify a hook source
+        url: "/reference/put-accounts-core-v1-hooksources-.html"
+      - title: Delete a hook source
+        url: "/reference/delete-accounts-core-v1-hooksources-.html"
+    - title: Kubernetes API resource
+      entries:
+      - title: Overview
+        url: "/reference/kubernetes_api_resource_endpoints.html"
+      - title: List the K8s API resources for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-apiresources.html"
+      - title: Retrieve a K8s API resource
+        url: "/reference/get-accounts-topology-v1-managedclusters-apiresources-.html"
+    - title: LDAP group
+      entries:
+      - title: Overview
+        url: "/reference/ldap_group_endpoints.html"
+      - title: List all LDAP groups
+        url: "/reference/get-accounts-core-v1-ldapgroups.html"
+      - title: Retrieve an LDAP group
+        url: "/reference/get-accounts-core-v1-ldapgroups-.html"
+    - title: LDAP user
+      entries:
+      - title: Overview
+        url: "/reference/ldap_user_endpoints.html"
+      - title: List all LDAP users
+        url: "/reference/get-accounts-core-v1-ldapusers.html"
+      - title: Retrieve an LDAP user
+        url: "/reference/get-accounts-core-v1-ldapusers-.html"
+    - title: License
+      entries:
+      - title: Overview
+        url: "/reference/license_endpoints.html"
+      - title: Create a new license
+        url: "/reference/post-accounts-core-v1-licenses.html"
+      - title: List all licenses
+        url: "/reference/get-accounts-core-v1-licenses.html"
+      - title: Retrieve a license
+        url: "/reference/get-accounts-core-v1-licenses-.html"
+      - title: Modify a license
+        url: "/reference/put-accounts-core-v1-licenses-.html"
+      - title: Delete a license
+        url: "/reference/delete-accounts-core-v1-licenses-.html"
+    - title: Managed cluster
+      entries:
+      - title: Overview
+        url: "/reference/managed_cluster_endpoints.html"
+      - title: Create a new managed cluster
+        url: "/reference/post-accounts-topology-v1-managedclusters.html"
+      - title: List all managed clusters
+        url: "/reference/get-accounts-topology-v1-managedclusters.html"
+      - title: Retrieve a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-.html"
+      - title: Modify a managed cluster
+        url: "/reference/put-accounts-topology-v1-managedclusters-.html"
+      - title: Delete a managed cluster
+        url: "/reference/delete-accounts-topology-v1-managedclusters-.html"
+    - title: Metrics
+      entries:
+      - title: Overview
+        url: "/reference/metrics_endpoints.html"
+      - title: Retrieve all metrics for an account
+        url: "/reference/get-accounts-metrics.html"
+    - title: Namespace
+      entries:
+      - title: Overview
+        url: "/reference/namespace_endpoints.html"
+      - title: List the namespaces for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-namespaces.html"
+      - title: Retrieve a namespace for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-namespaces-.html"
+      - title: List the namespaces for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-namespaces.html"
+      - title: Retrieve a namespace for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-namespaces-.html"
+      - title: List all namespaces
+        url: "/reference/get-accounts-topology-v1-namespaces.html"
+      - title: Retrieve a namespace
+        url: "/reference/get-accounts-topology-v1-namespaces-.html"
+      - title: List the namespaces for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-namespaces.html"
+      - title: Retrieve a namespace for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-namespaces-.html"
+    - title: Notification
+      entries:
+      - title: Overview
+        url: "/reference/notification_endpoints.html"
+      - title: List all notifications
+        url: "/reference/get-accounts-core-v1-notifications.html"
+      - title: Retrieve a notification
+        url: "/reference/get-accounts-core-v1-notifications-.html"
+    - title: Package
+      entries:
+      - title: Overview
+        url: "/reference/package_endpoints.html"
+      - title: Create a new package
+        url: "/reference/post-accounts-core-v1-packages.html"
+      - title: List all packages
+        url: "/reference/get-accounts-core-v1-packages.html"
+      - title: Retrieve a package
+        url: "/reference/get-accounts-core-v1-packages-.html"
+      - title: Delete a package
+        url: "/reference/delete-accounts-core-v1-packages-.html"
+    - title: Role binding
+      entries:
+      - title: Overview
+        url: "/reference/role_binding_endpoints.html"
+      - title: Create a new role binding for a group
+        url: "/reference/post-accounts-core-v1-groups-rolebindings.html"
+      - title: List the role bindings for a group
+        url: "/reference/get-accounts-core-v1-groups-rolebindings.html"
+      - title: Retrieve a role binding for a group
+        url: "/reference/get-accounts-core-v1-groups-rolebindings-.html"
+      - title: Modify a role binding for a group
+        url: "/reference/put-accounts-core-v1-groups-rolebindings-.html"
+      - title: Delete a role binding for a group
+        url: "/reference/delete-accounts-core-v1-groups-rolebindings-.html"
+      - title: Create a new role binding for a user in a group
+        url: "/reference/post-accounts-core-v1-groups-users-rolebindings.html"
+      - title: List the role bindings for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-rolebindings.html"
+      - title: Retrieve a role binding for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-rolebindings-.html"
+      - title: Modify a role binding for a user in a group
+        url: "/reference/put-accounts-core-v1-groups-users-rolebindings-.html"
+      - title: Delete a role binding for a user in a group
+        url: "/reference/delete-accounts-core-v1-groups-users-rolebindings-.html"
+      - title: Create a new role binding
+        url: "/reference/post-accounts-core-v1-rolebindings.html"
+      - title: List all role bindings
+        url: "/reference/get-accounts-core-v1-rolebindings.html"
+      - title: Retrieve a role binding
+        url: "/reference/get-accounts-core-v1-rolebindings-.html"
+      - title: Modify a role binding
+        url: "/reference/put-accounts-core-v1-rolebindings-.html"
+      - title: Delete a role binding
+        url: "/reference/delete-accounts-core-v1-rolebindings-.html"
+      - title: Create a new role binding for a user
+        url: "/reference/post-accounts-core-v1-users-rolebindings.html"
+      - title: List the role bindings for a user
+        url: "/reference/get-accounts-core-v1-users-rolebindings.html"
+      - title: Retrieve a role binding for a user
+        url: "/reference/get-accounts-core-v1-users-rolebindings-.html"
+      - title: Modify a role binding for a user
+        url: "/reference/put-accounts-core-v1-users-rolebindings-.html"
+      - title: Delete a role binding for a user
+        url: "/reference/delete-accounts-core-v1-users-rolebindings-.html"
+      - title: Create a new role binding for a group associated with a user
+        url: "/reference/post-accounts-core-v1-users-groups-rolebindings.html"
+      - title: List the role bindings for a group associated with a user
+        url: "/reference/get-accounts-core-v1-users-groups-rolebindings.html"
+      - title: Retrieve a role binding for a group associated with a user
+        url: "/reference/get-accounts-core-v1-users-groups-rolebindings-.html"
+      - title: Modify a role binding for a group associated with a user
+        url: "/reference/put-accounts-core-v1-users-groups-rolebindings-.html"
+      - title: Delete a role binding for a group associated with a user
+        url: "/reference/delete-accounts-core-v1-users-groups-rolebindings-.html"
+    - title: Schedule
+      entries:
+      - title: Overview
+        url: "/reference/schedule_endpoints.html"
+      - title: Create a new schedule for an app
+        url: "/reference/post-accounts-k8s-v1-apps-schedules.html"
+      - title: List the schedules for an app
+        url: "/reference/get-accounts-k8s-v1-apps-schedules.html"
+      - title: Retrieve a schedule
+        url: "/reference/get-accounts-k8s-v1-apps-schedules-.html"
+      - title: Modify a schedule
+        url: "/reference/put-accounts-k8s-v1-apps-schedules-.html"
+      - title: Delete a schedule
+        url: "/reference/delete-accounts-k8s-v1-apps-schedules-.html"
+    - title: Setting
+      entries:
+      - title: Overview
+        url: "/reference/setting_endpoints.html"
+      - title: List all settings
+        url: "/reference/get-accounts-core-v1-settings.html"
+      - title: Retrieve a setting
+        url: "/reference/get-accounts-core-v1-settings-.html"
+      - title: Modify a setting
+        url: "/reference/put-accounts-core-v1-settings-.html"
+    - title: Storage backend
+      entries:
+      - title: Overview
+        url: "/reference/storage_backend_endpoints.html"
+      - title: Create a new storage backend
+        url: "/reference/post-accounts-topology-v1-storagebackends.html"
+      - title: List all storage backends
+        url: "/reference/get-accounts-topology-v1-storagebackends.html"
+      - title: Retrieve a storage backend
+        url: "/reference/get-accounts-topology-v1-storagebackends-.html"
+      - title: Modify a storage backend
+        url: "/reference/put-accounts-topology-v1-storagebackends-.html"
+      - title: Delete a storage backend
+        url: "/reference/delete-accounts-topology-v1-storagebackends-.html"
+    - title: Storage class
+      entries:
+      - title: Overview
+        url: "/reference/storage_class_endpoints.html"
+      - title: List the storage classes for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-storageclasses.html"
+      - title: Retrieve a storage class for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-storageclasses-.html"
+      - title: List the storage classes for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-storageclasses.html"
+      - title: Retrieve a storage class for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-storageclasses-.html"
+      - title: List the storage classes for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-storageclasses.html"
+      - title: Retrieve a storage class for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-storageclasses-.html"
+    - title: Subscription
+      entries:
+      - title: Overview
+        url: "/reference/subscription_endpoints.html"
+      - title: Create a new subscription
+        url: "/reference/post-accounts-core-v1-subscriptions.html"
+      - title: List all subscriptions
+        url: "/reference/get-accounts-core-v1-subscriptions.html"
+      - title: Retrieve a subscription
+        url: "/reference/get-accounts-core-v1-subscriptions-.html"
+      - title: Modify a subscription
+        url: "/reference/put-accounts-core-v1-subscriptions-.html"
+      - title: Delete a subscription
+        url: "/reference/delete-accounts-core-v1-subscriptions-.html"
+    - title: Task
+      entries:
+      - title: Overview
+        url: "/reference/task_endpoints.html"
+      - title: List all tasks
+        url: "/reference/get-accounts-core-v1-tasks.html"
+      - title: Retrieve a task
+        url: "/reference/get-accounts-core-v1-tasks-.html"
+    - title: Token
+      entries:
+      - title: Overview
+        url: "/reference/token_endpoints.html"
+      - title: Create a new token for a user in a group
+        url: "/reference/post-accounts-core-v1-groups-users-tokens.html"
+      - title: List the tokens for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-tokens.html"
+      - title: Retrieve a token for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-tokens-.html"
+      - title: Modify a token for a user in a group
+        url: "/reference/put-accounts-core-v1-groups-users-tokens-.html"
+      - title: Delete a token for a user in a group
+        url: "/reference/delete-accounts-core-v1-groups-users-tokens-.html"
+      - title: Create a new token for a user
+        url: "/reference/post-accounts-core-v1-users-tokens.html"
+      - title: List the tokens for a user
+        url: "/reference/get-accounts-core-v1-users-tokens.html"
+      - title: Retrieve a token
+        url: "/reference/get-accounts-core-v1-users-tokens-.html"
+      - title: Modify a token
+        url: "/reference/put-accounts-core-v1-users-tokens-.html"
+      - title: Delete a token
+        url: "/reference/delete-accounts-core-v1-users-tokens-.html"
+    - title: Unread notification
+      entries:
+      - title: Overview
+        url: "/reference/unread_notification_endpoints.html"
+      - title: List the unread notifications for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-unreadnotifications.html"
+      - title: Retrieve an unread notification for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-unreadnotifications-.html"
+      - title: Delete an unread notification for a user in a group
+        url: "/reference/delete-accounts-core-v1-groups-users-unreadnotifications-.html"
+      - title: List the unread notifications for a user
+        url: "/reference/get-accounts-core-v1-users-unreadnotifications.html"
+      - title: Retrieve an unread notification
+        url: "/reference/get-accounts-core-v1-users-unreadnotifications-.html"
+      - title: Delete an unread notification
+        url: "/reference/delete-accounts-core-v1-users-unreadnotifications-.html"
+    - title: Upgrade
+      entries:
+      - title: Overview
+        url: "/reference/upgrade_endpoints.html"
+      - title: List all upgrades
+        url: "/reference/get-accounts-core-v1-upgrades.html"
+      - title: Retrieve an upgrade
+        url: "/reference/get-accounts-core-v1-upgrades-.html"
+      - title: Modify an upgrade
+        url: "/reference/put-accounts-core-v1-upgrades-.html"
+    - title: User
+      entries:
+      - title: Overview
+        url: "/reference/user_endpoints.html"
+      - title: Create a new user for a group
+        url: "/reference/post-accounts-core-v1-groups-users.html"
+      - title: List the users for a group
+        url: "/reference/get-accounts-core-v1-groups-users.html"
+      - title: Retrieve a user for a group
+        url: "/reference/get-accounts-core-v1-groups-users-.html"
+      - title: Modify a user for a group
+        url: "/reference/put-accounts-core-v1-groups-users-.html"
+      - title: Delete a user for a group
+        url: "/reference/delete-accounts-core-v1-groups-users-.html"
+      - title: Create a new user
+        url: "/reference/post-accounts-core-v1-users.html"
+      - title: List all users
+        url: "/reference/get-accounts-core-v1-users.html"
+      - title: Retrieve a user
+        url: "/reference/get-accounts-core-v1-users-.html"
+      - title: Modify a user
+        url: "/reference/put-accounts-core-v1-users-.html"
+      - title: Delete a user
+        url: "/reference/delete-accounts-core-v1-users-.html"
+    - title: Volume
+      entries:
+      - title: Overview
+        url: "/reference/volume_endpoints.html"
+      - title: List the volumes for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-volumes.html"
+      - title: Retrieve a volume for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-volumes-.html"
+      - title: List the volumes for a storage backend
+        url: "/reference/get-accounts-topology-v1-storagebackends-volumes.html"
+      - title: Retrieve a volume for a storage backend
+        url: "/reference/get-accounts-topology-v1-storagebackends-volumes-.html"
+      - title: List all volumes
+        url: "/reference/get-accounts-topology-v1-volumes.html"
+      - title: Retrieve a volume
+        url: "/reference/get-accounts-topology-v1-volumes-.html"
+      - title: List the volumes for an app
+        url: "/reference/get-accounts-k8s-v1-apps-volumes.html"
+      - title: Retrieve a volume for an app
+        url: "/reference/get-accounts-k8s-v1-apps-volumes-.html"
+  - section: information
+  - title: Earlier versions
+    url: "/aa-earlier-versions.html"
+  - title: Legal notices
+    url: "/legal-notices.html"
 product-family:
   name: Astra
   repo: astra-family

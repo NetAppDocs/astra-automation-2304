@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/account_endpoints.html'
+summary: 'Astra API (ACS) account endpoints'
+---
+
+= Astra API (ACS) account endpoints
+:imagesdir: ../media/
+
+
+
+The Account API represents isolated tenants in a multitenant system.
+
+
